@@ -1,0 +1,24 @@
+print("Fibonacci Series")
+n = int(input("Enter the number of terms: "))
+
+# Check for positive input
+if n > 0:
+    f = 0  # First term
+    s = 1  # Second term
+
+    print("\n*******************************************")
+    print("Fibonacci Series:")
+
+    for i in range(n):
+        if i == 0:
+            print(f, end=" ")  # Print the first term
+        elif i == 1:
+            print(s, end=" ")  # Print the second term
+        else:
+            next_term = f + s
+            print(next_term, end=" ")
+            f = s  # Update the previous term
+            s = next_term  # Update the current term
+    print("\n*******************************************")
+else:
+    print("You have entered a wrong input:", n)
