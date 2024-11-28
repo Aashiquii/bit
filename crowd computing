@@ -1,0 +1,14 @@
+from statistics import mean print("CROWD COMPUTING")
+print("***************")
+Estimates = [200, 100 ,250, 375 ,300 ,500 ,800 ,900 ,200 ,100 ,190,
+90,250,300,350,363,397,450,500,700,275,125,125,185,195,240,31
+0,415,300,250,300,2000,2500]
+i = 0
+for i in range (len(Estimates)): print (Estimates[i])
+Estimates.sort()
+print ("SORTED VALUES")
+for i in range (len(Estimates)): print (Estimates[i])
+tv = int (0.1 * len(Estimates))
+Estimates = Estimates [tv:len(Estimates)-tv] print ("COMPUTER VALUES")
+for i in range (len(Estimates)): print (Estimates[i])
+print ("\t", mean(Estimates))
