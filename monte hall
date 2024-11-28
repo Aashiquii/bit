@@ -1,0 +1,45 @@
+import random
+
+# Variables to track outcomes
+swap_wins = 0
+dont_swap_wins = 0
+
+# Simulate the game 10 times
+for _ in range(10):
+    # Initialize the doors
+    doors = ["Goat", "Goat", "Goat"]
+    bmw_door = random.randint(0, 2)  # Randomly place the BMW
+    doors[bmw_door] = "BMW"
+
+    # The player makes an initial choice
+    player_choice = int(input("Enter your choice (0, 1, 2): "))
+
+    # Find a goat door to open (that isn't the player's choice or the BMW door)
+    goat_doors = [i for i in range(3) if doors[i] == "Goat" and i != player_choice]
+    door_open = random.choice(goat_doors)
+
+    # Ask the player if they want to swap
+    print(f"Door {door_open} is opened to reveal a goat.")
+    swap = input("Do you want to swap your choice? (y/n): ").lower()
+
+    # Determine the final outcome
+    if swap == "y":
+        # Player swaps to the remaining door
+        new_choice = [i for i in range(3) if i != player_choice and i != door_open][0]
+        if doors[new_choice] == "BMW":
+            print("Player wins by swapping!")
+            swap_wins += 1
+        else:
+            print("Player loses by swapping.")
+    else:
+        # Player sticks with their original choice
+        if doors[player_choice] == "BMW":
+            print("Player wins by not swapping!")
+            dont_swap_wins += 1
+        else:
+            print("Player loses by not swapping.")
+
+# Display the results
+print("\nGame Summary:")
+print(f"Number of wins by swapping: {swap_wins}")
+print(f"Number of wins by not swapping: {dont_swap_wins}")
