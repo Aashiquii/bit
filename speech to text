@@ -1,0 +1,9 @@
+import speech_recognition as sr AUDIO_FILE = ("harvard.wav") #use audio file as source
+r=sr.Recognizer() # initialize Recognizer with sr.AudioFile(AUDIO_FILE) as source:
+audio=r.record(source) #reads the audio file
+try:
+
+print("audio file contains" +r.recognize_google(audio)) except sr.UnknownValueError:
+print (" Google Speech Recognition not understood the file uploaded")
+except sr.RequestError:
+print ("Couldn't get the result from Google Recognition")
