@@ -1,0 +1,33 @@
+print("Choice 1: Add, 2: Sub, 3: Div, 4: Mul, 5: Quit")
+
+# Taking input for operation choice
+n = int(input("Enter the choice of operation: "))
+a = int(input("Enter the value for A: "))
+b = int(input("Enter the value for B: "))
+
+if n == 1:
+    print("You have chosen addition:")
+    c = a + b
+    print("The Result:", a, "+", b, "=", c)
+elif n == 2:
+    print("You have chosen subtraction:")
+    c = a - b
+    print("The Result:", a, "-", b, "=", c)
+elif n == 3:
+    print("You have chosen division:")
+    # Check for division by zero
+    if b == 0:
+        print("Error: Division by zero is not allowed.")
+    else:
+        c = a / b
+        print("The Result:", a, "/", b, "=", c)
+elif n == 4:
+    print("You have chosen multiplication:")
+    c = a * b
+    print("The Result:", a, "*", b, "=", c)
+elif n == 5:
+    print("Exiting the program. Goodbye!")
+    exit()
+else:
+    print("Invalid option. Please choose a valid operation.")
+
