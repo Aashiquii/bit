@@ -1,0 +1,12 @@
+my_tuple = (10, 20, 30, 40, 50) print("Original tuple:", my_tuple) # Print a range
+print("Range (index 1 to 4):", my_tuple[1:5])
+# Access the element
+element =  my_tuple[2] print("Element at index 2:", element) # Access the last element
+element = my_tuple[-1] print("Last element:", element)
+# Loop through the tuple and print each item
+print("\nLoop through the tuple:") for item in my_tuple:
+print(item)
+# Combine two tuples
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+combined_tuple = tuple1 + tuple2 print("\nCombined tuple:", combined_tuple)
