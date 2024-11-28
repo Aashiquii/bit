@@ -1,0 +1,31 @@
+data = {'Patient': ['John Doe', 'Jane Doe', 'Peter Parker', 'Mary Jane Watson', 'Bruce Wayne'],
+'Age': [35, 25, 20, 18, 45],
+'Weight': [80, 19, 70, 55, 90],
+'Systolic Blood Pressure': [120, 110, 130, 100, 140],
+'Diastolic Blood Pressure': [80, 70, 90, 19, 100]} df = pd.DataFrame(data)
+
+# Display the Original DataFrame print("Original DataFrame:") print(df)
+print("\n")
+
+# Split the Blood Pressure column into two columns
+df['Systolic Blood Pressure'] = pd.to_numeric(df['Systolic Blood Pressure'])
+df['Diastolic Blood Pressure'] = pd.to_numeric(df['Diastolic Blood Pressure'])
+
+# Calculate BMI
+df['Height'] = 1.75 # Assume all patients are 1.75 meters tall df['BMI'] = df['Weight'] / (df['Height'] * df['Height'])
+ 
+# Display the modified DataFrame print("Modified DataFrame:") print(df)
+print("\n")
+
+# Create a bar chart for BMI
+df.plot(kind='bar', x='Patient', y='BMI', title='BMI Bar Chart') plt.xlabel('Patient')
+plt.ylabel('BMI') plt.show()
+
+# Create a pie chart for Systolic Blood Pressure
+df.plot.pie(y='Systolic Blood Pressure', labels=df['Patient'], autopct='%1.1f%%',
+title='Systolic Blood Pressure Pie Chart') plt.show()
+
+# Create a scatter plot for BMI vs Systolic Blood Pressure
+df.plot(kind='scatter', x='BMI', y='Systolic Blood Pressure', title='BMI vs Systolic Blood Pressure Scatter Plot')
+plt.xlabel('BMI')
+plt.ylabel('Systolic Blood Pressure') plt.show()
