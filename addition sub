@@ -1,6 +1,4 @@
 print("Choice 1: Add, 2: Sub, 3: Div, 4: Mul, 5: Quit")
-
-# Taking input for operation choice
 n = int(input("Enter the choice of operation: "))
 a = int(input("Enter the value for A: "))
 b = int(input("Enter the value for B: "))
