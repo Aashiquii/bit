@@ -1,0 +1,21 @@
+my_list = [1, 2, 3, 4, 5] print("Original list:", my_list)
+# Calculate the range of the list list_range = max(my_list) - min(my_list) print("Range:", list_range)
+# Access the element at index 2
+element = my_list[2]
+print ("Element at index 2:", element)
+# Access the last element
+element = my_list[-1]
+print ("Last element:", element) print ("\nLoop through the list:") for item in my_list:
+print(item)
+ 
+# Append 4 to the end of the list
+my_list.append(4)
+print("\nAfter appending 4:", my_list) # Remove the first occurrence of 3 my_list.remove(3)
+print("After removing the first occurrence of 3:", my_list)
+# Remove the element at index 1
+del my_list[1]
+print("After deleting element at index 1:", my_list)
+# Combine list1 and list2 using extend
+list1 = [1, 2, 3]
+list2 = [4, 5, 6] list1.extend(list2)
+print("\nCombined list1 and list2:", list1)
