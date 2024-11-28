@@ -1,0 +1,31 @@
+# Original dictionary
+my_dict = {'name': 'John', 'age': 30, 'city': 'New York'}
+print("Original dictionary:", my_dict)
+
+# Accessing the value of the key 'name'
+name = my_dict['name']
+print("Name:", name)
+
+# Loop through the dictionary and print keys
+print("\nKeys in the dictionary:")
+for key in my_dict:
+    print(key)
+
+# Adding a new key-value pair
+my_dict['gender'] = 'Male'
+print("\nAfter adding gender:", my_dict)
+
+# Removing the key-value pair
+my_dict.pop('age')
+print("After removing age:", my_dict)
+
+# Combining two dictionaries
+dict1 = {'name': 'Alice', 'age': 25}
+dict2 = {'city': 'New York', 'country': 'USA'}
+
+# Creating a new dictionary and combining them
+combined_dict = dict1.copy()  # Create a copy of dict1
+combined_dict.update(dict2)   # Update it with dict2
+
+# Display the combined dictionary
+print("\nCombined dictionary:", combined_dict)
